@@ -13,7 +13,7 @@ The language SimpleLang supports:
 - Basic error recovery
 
 #### Grammar for SimpleLang
-
+```plain
 Program     → { Function | Statement }
 Function    → 'func' id '(' [Parameters] ')' '{' { Statement } '}'
 Parameters  → (Type id { ',' Type id })
@@ -27,6 +27,7 @@ Arguments   → (Expression { ',' Expression })
 Expression  → Term { ('+' | '-') Term }
 Term        → Factor { ('*' | '/') Factor }
 Factor      → '(' Expression ')' | id | number
+```
 
 ### 2. **Compiler Design**
 
